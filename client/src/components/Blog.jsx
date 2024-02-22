@@ -52,7 +52,7 @@ const Blog = () => {
       >
           delete
       </Button>
-      <Comments user={user} comments={blog.comments} />
+      <Comments comments={blog.comments} />
     </Container>
   )
 }

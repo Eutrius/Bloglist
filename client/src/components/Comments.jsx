@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import { createComment } from '../reducers/blogsReducer'
 import { Form, Button } from 'react-bootstrap'
 
-const Comments = ({ user,comments }) => {
+const Comments = ({ comments }) => {
   const [comment, setComment] = useState('')
   const id = useParams().id
   const dispatch = useDispatch()
@@ -20,7 +20,7 @@ const Comments = ({ user,comments }) => {
   return (
     <div>
       <h3>comments</h3>
-      <Form className="row g-2" onSubmit={handleCreateComment} style={{ display : user ? '' : 'none' }} >
+      <Form className="row g-2" onSubmit={handleCreateComment} >
         <Form.Group className="col-auto">
           <Form.Control
             type="text"
