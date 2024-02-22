@@ -36,8 +36,26 @@ To run the application locally, follow these steps:
 
     npm run build:ui
 
+-- Create a .env file with these variables:
+
+    SECRET=PUT_RANDOM_STRING_HERE
+    MONGODB_URI=PUT_YOUR_MONGODB_URI_HERE
+
 -- Start the web app:
 
     npm Start
 
 -- Open your web browser and navigate to http://localhost:3003 to view the application.
+
+### Additional note
+
+I haven't implemented user registration in the frontend yet. If you would like to register, please send an HTTP request using RESTful HTTP or Postman.
+
+        POST http://localhost:3003/api/users
+        Content-Type: application/json
+
+        {
+        "username": "demo",
+        "name": "Demonstration",
+        "password": "demo"
+        }
